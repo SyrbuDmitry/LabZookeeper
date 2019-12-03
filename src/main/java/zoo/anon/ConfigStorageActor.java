@@ -15,7 +15,7 @@ public class ConfigStorageActor extends AbstractActor {
     ConfigStorageActor() throws IOException{
         zooWatcher = new ZooWatcher();
         String zkConnString = "<zknode1>:2181,<zknode2>:2181,<zknode3>:2181";
-        zoo = new ZooKeeper("127.0.0.1:2181",3000,zooWatcher);
+        zoo = new ZooKeeper(zkConnString,3000,zooWatcher);
     }
     @Override
     public Receive createReceive(){
