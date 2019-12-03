@@ -77,6 +77,13 @@
             <artifactId>akka-http-xml_2.12</artifactId>
             <version>${akka-http.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.zookeeper/zookeeper -->
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.5</version>
+            <type>pom</type>
+        </dependency>
 
 
     </dependencies>
