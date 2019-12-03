@@ -8,7 +8,7 @@ import org.apache.zookeeper.ZooKeeper;
 
 public class AnonApp {
     public static void main(String[] args ){
-        ActorSystem system = ActorSystem.create("lab5");
+        ActorSystem system = ActorSystem.create("lab6");
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         ActorRef configActor = system.actorOf(Props.create(ConfigStorageActor.class));
 
