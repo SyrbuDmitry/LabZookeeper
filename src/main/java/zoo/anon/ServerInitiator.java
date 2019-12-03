@@ -28,11 +28,10 @@ public class ServerInitiator {
         return
                 route(
                         pathSingleSlash(() ->
-                                get(() ->
-                                        parameter("packageID", id -> {
-                                                    Future<Object> result = Patterns.ask(RouteActor, new GetResultMessage(Integer.parseInt(id)), 5000);
-                                                    return completeOKWithFuture(result, Jackson.marshaller());
-                                                }
+                                parameter("url", (url) ->
+                                        parameter("count", (count) ->{
+                                            
+                                        }
                                         )
                                 )
                         );
