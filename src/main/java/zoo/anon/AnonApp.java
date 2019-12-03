@@ -21,7 +21,7 @@ public class AnonApp {
         String path = zoo.create("/s",
                 "data".getBytes(),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
-        System.out.println(path);
+        System.out.println(zoo.getChildren("/servers", zooWatcher));
 
     }
 }
