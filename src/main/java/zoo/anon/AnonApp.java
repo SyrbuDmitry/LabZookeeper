@@ -22,7 +22,8 @@ public class AnonApp {
                 "data".getBytes(),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE,
                 CreateMode.EPHEMERAL_SEQUENTIAL);
-        path = zoo.create(path+"/s",
+        System.out.println(path);
+        zoo.create(path+"/s",
                 "data".getBytes(),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE,
                 CreateMode.EPHEMERAL_SEQUENTIAL);
