@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f226d497-b314-4dcc-887c-0ce05648882c" name="Default" comment="" />
+    <list default="true" id="f226d497-b314-4dcc-887c-0ce05648882c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java" afterPath="$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" afterPath="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,8 +18,8 @@
       <file leaf-file-name="AnonApp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -27,8 +30,8 @@
       <file leaf-file-name="ConfigStorageActor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            <state relative-caret-position="120">
+              <caret line="8" column="55" lean-forward="false" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -287,12 +290,12 @@
       <option name="presentableId" value="Default" />
       <updated>1575292537975</updated>
       <workItem from="1575292539207" duration="710000" />
-      <workItem from="1575389835597" duration="1315000" />
+      <workItem from="1575389835597" duration="1486000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2025000" />
+    <option name="totallyTimeSpent" value="2196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-52" y="99" width="1023" height="877" extended-state="0" />
@@ -363,8 +366,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        <state relative-caret-position="120">
+          <caret line="8" column="55" lean-forward="false" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -373,8 +376,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
