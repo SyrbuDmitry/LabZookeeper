@@ -7,12 +7,14 @@ import org.apache.zookeeper.ZooKeeper;
 
 public class ServerInitiator {
     private ZooKeeper zoo;
+    ServerInitiator(ZooKeeper zoo){
+        this.zoo = zoo;
+    }
     public void createServer(String host, String port) throws KeeperException,InterruptedException{
-        zoo.create("/servers/"+host+":"+port,
-                "data".getBytes(),
+        String path = zoo.create("/servers/"+host,
+                port.getBytes(),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE,
                 CreateMode.EPHEMERAL);
-
+        System.out.println(path+" Connected");
     }
-
 }

@@ -13,14 +13,12 @@ import java.io.IOException;
 import java.util.List;
 
 public class AnonApp {
-    public static void main(String[] args ) throws InterruptedException,IOException,KeeperException{
+    public static void main(String[] args) throws InterruptedException, IOException, KeeperException {
         ActorSystem system = ActorSystem.create("lab6");
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         ZooWatcher zooWatcher = new ZooWatcher();
-        ZooKeeper zoo = new ZooKeeper("127.0.0.1:2181", 3000,zooWatcher);
-        zoo.create("/servers/s",
-                "data".getBytes(),
-                ZooDefs.Ids.OPEN_ACL_UNSAFE,
-                CreateMode.EPHEMERAL);
+        ZooKeeper zoo = new ZooKeeper("127.0.0.1:2181", 3000, zooWatcher);
+        ServerInitiator init = new ServerInitiator(zoo);
+        init.createServer(args[0],args[1]);
     }
 }
