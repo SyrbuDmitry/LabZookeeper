@@ -22,6 +22,5 @@ public class AnonApp {
                 "data".getBytes(),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE,
                 CreateMode.EPHEMERAL);
-        System.out.println(path);
     }
 }
