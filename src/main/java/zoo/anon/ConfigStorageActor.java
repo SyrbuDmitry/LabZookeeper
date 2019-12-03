@@ -16,18 +16,8 @@ import java.util.List;
 public class ConfigStorageActor extends AbstractActor {
     private ZooWatcher zooWatcher;
     private ZooKeeper zoo;
-    ConfigStorageActor() throws IOException,KeeperException,InterruptedException {
-        zooWatcher = new ZooWatcher();
-        zoo = new ZooKeeper("127.0.0.1:2181", 3000,zooWatcher);
-        zoo.create("/servers/s",
-                "data".getBytes(),
-                ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
-        List<String> servers = zoo.getChildren("/servers", zooWatcher);
-//        for (String s : servers) {
-//            byte[] data = zoo.getData("/servers/" + s, false, null);
-//            System.out.println("server " + s + " data=" + new String(data));
-//        }
-    }
+
+
     @Override
     public Receive createReceive(){
         return ReceiveBuilder.create()
