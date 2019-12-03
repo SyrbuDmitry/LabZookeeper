@@ -34,7 +34,7 @@ public class AnonApp {
 
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(
                 routeFlow,
-                ConnectHttp.toHost("localhost", 8085),
+                ConnectHttp.toHost(args[0], Integer.parseInt(args[1])),
                 materializer
         );
         System.out.println("Server online at http://localhost:8085/\nPress RETURN to stop...");

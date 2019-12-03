@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f226d497-b314-4dcc-887c-0ce05648882c" name="Default" comment="" />
+    <list default="true" id="f226d497-b314-4dcc-887c-0ce05648882c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java" afterPath="$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,8 +30,8 @@
       <file leaf-file-name="AnonApp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="44" column="5" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+            <state relative-caret-position="340">
+              <caret line="36" column="69" lean-forward="false" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -114,8 +116,8 @@
         <option value="$PROJECT_DIR$/src/main/java/zoo/anon/ZooWatcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/zoo/anon/Request.java" />
         <option value="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/zoo/anon/ServerInitiator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java" />
       </list>
     </option>
   </component>
@@ -336,12 +338,12 @@
       <option name="presentableId" value="Default" />
       <updated>1575292537975</updated>
       <workItem from="1575292539207" duration="710000" />
-      <workItem from="1575389835597" duration="10307000" />
+      <workItem from="1575389835597" duration="10354000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11017000" />
+    <option name="totallyTimeSpent" value="11064000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="167" y="23" width="1684" height="877" extended-state="0" />
@@ -468,8 +470,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="44" column="5" lean-forward="false" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        <state relative-caret-position="340">
+          <caret line="36" column="69" lean-forward="false" selection-start-line="36" selection-start-column="69" selection-end-line="36" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
