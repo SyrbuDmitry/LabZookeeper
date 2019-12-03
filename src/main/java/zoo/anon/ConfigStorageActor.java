@@ -11,12 +11,13 @@ import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ConfigStorageActor extends AbstractActor {
     private ZooWatcher zooWatcher;
     private ZooKeeper zoo;
-
+    private ArrayList<String> servers;
 
     @Override
     public Receive createReceive(){

@@ -30,7 +30,7 @@ public class ServerInitiator {
                         pathSingleSlash(() ->
                                 parameter("url", (url) ->
                                         parameter("count", (count) ->{
-                                            
+
                                         }
                                         )
                                 )
