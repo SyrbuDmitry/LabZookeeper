@@ -18,7 +18,7 @@ public class AnonApp {
 //        final ActorMaterializer materializer = ActorMaterializer.create(system);
         ZooWatcher zooWatcher = new ZooWatcher();
         ZooKeeper zoo = new ZooKeeper("127.0.0.1:2181", 3000,zooWatcher);
-        String path = zoo.create("/servers",
+        String path = zoo.create("/",
                 "data".getBytes(),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE,
                 CreateMode.EPHEMERAL_SEQUENTIAL);
