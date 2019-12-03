@@ -22,7 +22,7 @@ public class ConfigStorageActor extends AbstractActor {
         System.out.println("Watcher");
         String zkConnString = "<zknode1>:2181,<zknode2>:2181,<zknode3>:2181";
         System.out.println("NODES");
-        zoo = new ZooKeeper(zkConnString, 3000, zooWatcher);
+        zoo = new ZooKeeper("127.0.0.1:2181", 3000, zooWatcher);
         zoo.create("/servers/s",
                 "data".getBytes(),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
