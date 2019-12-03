@@ -21,10 +21,7 @@ public class AnonApp {
         zoo.create("/servers/s",
                 "data".getBytes(),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
-        List<String> servers = zoo.getChildren("/", zooWatcher);
-        for (String s : servers) {
-            byte[] data = zoo.getData("/" + s, false, null);
-            System.out.println("server " + s + " data=" + new String(data)); }
+         
 
 
     }
