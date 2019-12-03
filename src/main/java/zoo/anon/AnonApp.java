@@ -19,7 +19,7 @@ public class AnonApp {
         ZooWatcher zooWatcher = new ZooWatcher();
         ZooKeeper zoo = new ZooKeeper("127.0.0.1:2181", 3000,zooWatcher);
         zoo.create("/servers/s",
-                data.getBytes(),
+                "data".getBytes(),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
 
 
