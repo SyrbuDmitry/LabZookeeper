@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f226d497-b314-4dcc-887c-0ce05648882c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" afterPath="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" />
-    </list>
+    <list default="true" id="f226d497-b314-4dcc-887c-0ce05648882c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/zookeeper_labs$AnonApp.coverage" NAME="AnonApp Coverage Results" MODIFIED="1575403360742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/zookeeper_labs$AnonApp.coverage" NAME="AnonApp Coverage Results" MODIFIED="1575403362995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -326,12 +323,12 @@
       <option name="presentableId" value="Default" />
       <updated>1575292537975</updated>
       <workItem from="1575292539207" duration="710000" />
-      <workItem from="1575389835597" duration="2930000" />
+      <workItem from="1575389835597" duration="2937000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3640000" />
+    <option name="totallyTimeSpent" value="3647000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="23" width="1447" height="877" extended-state="0" />
