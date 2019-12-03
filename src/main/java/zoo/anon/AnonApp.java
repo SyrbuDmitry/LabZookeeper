@@ -5,6 +5,7 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 import akka.http.javadsl.ConnectHttp;
+import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
@@ -23,12 +24,13 @@ public class AnonApp {
     public static void main(String[] args) throws InterruptedException, IOException, KeeperException {
         ActorSystem system = ActorSystem.create("lab6");
         final ActorMaterializer materializer = ActorMaterializer.create(system);
+        ActorRef configStorage = system.actorOf(Props.create(ConfigStorageActor.class));
         ZooWatcher zooWatcher = new ZooWatcher();
         ZooKeeper zoo = new ZooKeeper("127.0.0.1:2181", 3000, zooWatcher);
-        ServerInitiator init = new ServerInitiator(zoo);
+        ServerInitiator init = new ServerInitiator(zoo,configStorage);
         init.createServer(args[0],args[1]);
-
-        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = instance.createRoute(RouteActor).flow(system, materializer);
+        final Http http = Http.get(system);
+        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = init.createRoute().flow(system, materializer);
 
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(
                 routeFlow,
@@ -41,6 +43,4 @@ public class AnonApp {
                 .thenCompose(ServerBinding::unbind)
                 .thenAccept(unbound -> system.terminate());
     }
-
-}
 }

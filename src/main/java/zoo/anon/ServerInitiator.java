@@ -14,8 +14,10 @@ import static akka.http.javadsl.server.Directives.*;
 
 public class ServerInitiator {
     private ZooKeeper zoo;
-    ServerInitiator(ZooKeeper zoo){
+    ActorRef storage;
+    ServerInitiator(ZooKeeper zoo,ActorRef storage){
         this.zoo = zoo;
+        this.storage = storage;
     }
     public void createServer(String host, String port) throws KeeperException,InterruptedException{
         String path = zoo.create("/servers/"+host,
@@ -24,16 +26,18 @@ public class ServerInitiator {
                 CreateMode.EPHEMERAL);
         System.out.println(path+" Connected");
     }
-    private Route createRoute() {
+    public Route createRoute() {
         return
                 route(
                         pathSingleSlash(() ->
                                 parameter("url", (url) ->
                                         parameter("count", (count) ->{
-
+                                                    Future<Object> result = Patterns.ask(storage, new Request(url,Integer.parseInt(count)), 5000);
+                                                    return completeOKWithFuture(result, Jackson.marshaller());
                                         }
                                         )
                                 )
-                        );
+                        )
+                );
     }
 }
