@@ -15,6 +15,7 @@ public class ConfigStorageActor extends AbstractActor {
     private ZooWatcher zooWatcher;
     private ZooKeeper zoo;
     ConfigStorageActor() throws IOException,KeeperException,InterruptedException{
+        System.out.println("CONFIG");
         zooWatcher = new ZooWatcher();
         String zkConnString = "<zknode1>:2181,<zknode2>:2181,<zknode3>:2181";
         zoo = new ZooKeeper(zkConnString,3000,zooWatcher);
