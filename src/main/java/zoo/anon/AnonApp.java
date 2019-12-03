@@ -10,6 +10,6 @@ public class AnonApp {
         ActorSystem system = ActorSystem.create("lab5");
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         ActorRef configActor = system.actorOf(Props.create(ConfigStorageActor.class));
-        Zook
+        ZooKeeper
     }
 }
