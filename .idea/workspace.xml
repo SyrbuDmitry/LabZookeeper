@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f226d497-b314-4dcc-887c-0ce05648882c" name="Default" comment="" />
+    <list default="true" id="f226d497-b314-4dcc-887c-0ce05648882c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java" afterPath="$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" afterPath="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -25,8 +28,8 @@
       <file leaf-file-name="AnonApp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            <state relative-caret-position="0">
+              <caret line="0" column="17" lean-forward="true" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,8 +40,20 @@
       <file leaf-file-name="ConfigStorageActor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+            <state relative-caret-position="240">
+              <caret line="16" column="62" lean-forward="true" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZooWatcher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/ZooWatcher.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -86,6 +101,7 @@
         <option value="$PROJECT_DIR$/src/main/java/zoo/anon/RouterActor.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zoo/anon/ZooWatcher.java" />
         <option value="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" />
       </list>
     </option>
@@ -97,8 +113,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="57" />
-    <option name="y" value="111" />
+    <option name="x" value="111" />
+    <option name="y" value="261" />
     <option name="width" value="1447" />
     <option name="height" value="877" />
   </component>
@@ -162,26 +178,6 @@
               <item name="zookeeper-labs" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="Maven: org.apache.zookeeper:zookeeper:3.5.5" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="zookeeper-labs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.zookeeper:zookeeper:3.5.5" type="70bed36:NamedLibraryElementNode" />
-              <item name="zookeeper-3.5.5.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zookeeper-labs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.zookeeper:zookeeper:3.5.5" type="70bed36:NamedLibraryElementNode" />
-              <item name="zookeeper-3.5.5.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zookeeper-labs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.apache.zookeeper:zookeeper:3.5.5" type="70bed36:NamedLibraryElementNode" />
-              <item name="zookeeper-3.5.5.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="zookeeper" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -327,15 +323,15 @@
       <option name="presentableId" value="Default" />
       <updated>1575292537975</updated>
       <workItem from="1575292539207" duration="710000" />
-      <workItem from="1575389835597" duration="2388000" />
+      <workItem from="1575389835597" duration="2708000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3098000" />
+    <option name="totallyTimeSpent" value="3418000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="111" width="1447" height="877" extended-state="0" />
+    <frame x="111" y="261" width="1447" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -419,8 +415,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="true" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/ZooWatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -429,8 +435,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        <state relative-caret-position="240">
+          <caret line="16" column="62" lean-forward="true" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
