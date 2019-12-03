@@ -23,6 +23,7 @@ public class ConfigStorageActor extends AbstractActor {
         zoo = new ZooKeeper(zkConnString,3000,zooWatcher);
         System.out.println("ZOOKEEPER");
         List<String> zkNodes = zoo.getChildren("/", true);
+        System.out.println("GETCHILDREN");
         for(String node : zkNodes) {
             System.out.println(node);
         }
