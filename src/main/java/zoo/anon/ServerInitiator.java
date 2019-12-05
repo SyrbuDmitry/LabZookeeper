@@ -47,11 +47,11 @@ public class ServerInitiator {
     }
 
     private Route handleRequest(Request r){
-        return r.count==0 ? completeOKWithFuture(fetch(r.url).toCompletableFuture().thenApply(Http:) :
+        return r.count==0 ? completeOKWithFuture(fetch(r.url).thenApply(e->(HttpResponse) e) :
     }
 
     private CompletionStage<HttpResponse> fetch(String url) {
-        return http.singleRequest(HttpRequest.create(url));
+        return http.singleRequest(HttpRequest.create(url)).toCompletableFuture();
     }
 
 }
