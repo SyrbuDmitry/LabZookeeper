@@ -48,7 +48,7 @@ public class ServerInitiator {
 
     private Route handleRequest(Request r){
         CompletionStage<HttpResponse> response = fetch(r.url).toCompletableFuture();
-        return completeOKWithFuture(response.thenApply(HttpResponse::)) :
+        return completeOKWithFuture(response.
     }
 
     private CompletionStage<HttpResponse> fetch(String url) {
