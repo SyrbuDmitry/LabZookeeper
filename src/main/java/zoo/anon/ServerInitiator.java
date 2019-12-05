@@ -51,6 +51,7 @@ public class ServerInitiator {
     }
 
     private Route handleRequest(Request r){
+        System.out.println(r.url+" "+r.count);
         return r.count==0? completeWithFuture(fetch(r.url)) :
                 completeWithFuture(sendRequestToRandomServer(new Request(r.url,r.count-1)));
     }
