@@ -21,10 +21,12 @@ import static akka.http.javadsl.server.Directives.*;
 public class ServerInitiator {
 
     private ZooKeeper zoo;
-    ActorRef storage;
-    ServerInitiator(ZooKeeper zoo,ActorRef storage){
+    private Http http;
+    private ActorRef storage;
+    ServerInitiator(ZooKeeper zoo,ActorRef storage, Http http){
         this.zoo = zoo;
         this.storage = storage;
+        this.http = http;
     }
     public void createServer(String host, String port) throws KeeperException,InterruptedException{
         String path = zoo.create("/servers/"+host,
@@ -45,11 +47,10 @@ public class ServerInitiator {
     }
 
     private Route handleRequest(Request r){
-        return r.count==0 ? completeOKWithFuture(fetch(r.url).thenApply()) :
+        return r.count==0 ? completeOKWithFuture(fetch(r.url).thenApply(Response::)) :
     }
 
-    CompletionStage<HttpResponse> fetch(String url) {
-        final Http http = new Http();
+    private CompletionStage<HttpResponse> fetch(String url) {
         return http.singleRequest(HttpRequest.create(url));
     }
 
