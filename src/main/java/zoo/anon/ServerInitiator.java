@@ -26,11 +26,10 @@ public class ServerInitiator {
         this.zoo = zoo;
         this.storage = storage;
         this.http = http;
-        WatchServer();
     }
 
     private void WatchServer(WatchedEvent e) throws KeeperException, InterruptedException{
-        zoo.getChildren("/servers",this::WatchServer);
+        zoo.getChildren("/servers",);
     }
 
     public void createServer(String host, String port) throws KeeperException,InterruptedException{
