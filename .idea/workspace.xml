@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f226d497-b314-4dcc-887c-0ce05648882c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" afterPath="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/anon/ServerInitiator.java" afterPath="$PROJECT_DIR$/src/main/java/zoo/anon/ServerInitiator.java" />
-    </list>
+    <list default="true" id="f226d497-b314-4dcc-887c-0ce05648882c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -342,12 +339,12 @@
       <updated>1575292537975</updated>
       <workItem from="1575292539207" duration="710000" />
       <workItem from="1575389835597" duration="10429000" />
-      <workItem from="1575539476236" duration="1050000" />
+      <workItem from="1575539476236" duration="1103000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12189000" />
+    <option name="totallyTimeSpent" value="12242000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-47" y="44" width="1440" height="877" extended-state="0" />
