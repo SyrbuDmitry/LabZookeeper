@@ -44,7 +44,10 @@ public class ServerInitiator {
                 route(
                         pathSingleSlash(() ->
                                 parameter("url", (url) ->
-                                        parameter("count", (count) -> handleRequest(new Request(url,count)))
+                                        parameter("count", (count) ->{
+                                            System.out.println(url+" "+count);
+                                            return  handleRequest(new Request(url,count));
+                                        })
                                 )
                         )
                 );
