@@ -62,15 +62,14 @@ public class ServerInitiator {
 
     //отправка url
     private CompletionStage<HttpResponse> fetch(String url) {
+        System.out.println(url);
         return http.singleRequest(HttpRequest.create(url));
     }
 
     //отправка рандому
     private CompletionStage<HttpResponse> sendRequestToRandomServer(Request r){
-            String servUrl = Patterns.ask(storage,new GetServer(), Duration.ofSeconds(5))
+        return Patterns.ask(storage,new GetServer(), Duration.ofSeconds(5))
                     .thenApply(o->((ServerMessage)o).getUrl())
-
-            return fetch(servUrl);
+                    .thenCompose(re->fetch(re));
     }
-
 }
