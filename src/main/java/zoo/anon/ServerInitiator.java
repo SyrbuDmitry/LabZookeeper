@@ -38,6 +38,6 @@ public class ServerInitiator {
     }
 
     private Route handleRequest(Request r){
-        
+        return r.count==0 ? 
     }
 }
