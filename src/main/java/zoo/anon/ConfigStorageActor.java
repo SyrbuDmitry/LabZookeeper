@@ -35,7 +35,7 @@ public class ConfigStorageActor extends AbstractActor {
                 .match(GetServer.class,r->{
                     String s = getRandomServer();
                     System.out.println("RANDOM SERVER "+s);
-                    sender().tell(new ServerMessage(s),ActorRef.noSender());
+                    sender().tell(s,ActorRef.noSender());
                 })
                 .build();
     }

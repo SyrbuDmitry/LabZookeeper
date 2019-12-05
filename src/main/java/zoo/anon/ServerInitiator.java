@@ -69,7 +69,12 @@ public class ServerInitiator {
     //отправка рандому
     private CompletionStage<HttpResponse> sendRequestToRandomServer(Request r){
         return Patterns.ask(storage,new GetServer(), Duration.ofSeconds(5))
-                    .thenApply(o->((ServerMessage)o).getUrl())
+                    .thenApply(o->(String)o)
                     .thenCompose(re->fetch(re));
+    }
+
+    //запрос серверу
+    private HttpRequest serverRequestBuilder(String servUrl,Request r){
+        
     }
 }
