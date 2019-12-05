@@ -53,7 +53,7 @@ public class ServerInitiator implements Watcher{
                         pathSingleSlash(() ->
                                 parameter("url", (url) ->
                                         parameter("count", (count) ->{
-                                            System.out.println(url+" "+count);
+                                           
                                             return  handleRequest(new Request(url,count));
                                         })
                                 )
