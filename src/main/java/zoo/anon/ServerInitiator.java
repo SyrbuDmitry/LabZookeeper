@@ -35,7 +35,7 @@ public class ServerInitiator {
                 port.getBytes(),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE,
                 CreateMode.EPHEMERAL);
-        storage.tell(new AddServer(host+port),ActorRef.noSender());
+        storage.tell(new AddServer(host+":"+port),ActorRef.noSender());
         System.out.println(path+" Connected");
     }
 
