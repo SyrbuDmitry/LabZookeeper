@@ -14,13 +14,14 @@ import org.apache.zookeeper.ZooKeeper;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class ConfigStorageActor extends AbstractActor {
     final Http http = Http.get(context().system());
     private ZooWatcher zooWatcher;
     private ZooKeeper zoo;
     private ArrayList<String> servers;
-
+    private Random random = new Random();
 
 
     @Override
@@ -28,11 +29,12 @@ public class ConfigStorageActor extends AbstractActor {
         return ReceiveBuilder.create()
                 .match(Request.class,r->{})
                 .match(GetServer.class,r->{
-                    sender().tell(,ActorRef.noSender());
+                    sender().tell(getRandomServer(),ActorRef.noSender());
                 })
                 .build();
     }
     private String getRandomServer(){
-        
+        return servers.get(random.nextInt(servers.size()));
+
     }
 }

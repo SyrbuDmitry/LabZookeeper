@@ -61,6 +61,7 @@ public class ServerInitiator {
     //отправка рандому
     private CompletionStage<HttpResponse> sendRequestToRandomServer(Request r){
         Future<Object> serv  = Patterns.ask(storage,new GetServer(),5000);
+        return fetch(serv);
     }
 
 }
