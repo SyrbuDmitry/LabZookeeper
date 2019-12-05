@@ -60,14 +60,13 @@ public class ServerInitiator implements Watcher{
 
     private Route handleRequest(Request r){
         if (r.count==0)
-        System.out.println("FINAL  HOP ON ");
+        System.out.println("FINAL  HOP ON ME");
         return r.count==0? completeWithFuture(fetch(r.url)) :
                 completeWithFuture(sendRequestToRandomServer(new Request(r.url,r.count-1)));
     }
 
     //отправка url
     private CompletionStage<HttpResponse> fetch(String url) {
-        System.out.println("FETCH "+url);
         return http.singleRequest(HttpRequest.create(url));
     }
 
