@@ -47,7 +47,8 @@ public class ServerInitiator {
     }
 
     private Route handleRequest(Request r){
-        return r.count==0 ? completeOKWithFuture(fetch(r.url).toCompletableFuture().thenApply(e -> e.entity())):
+        CompletionStage<HttpResponse> response = fetch(r.url).toCompletableFuture();
+        return r.count==0 ? completeOKWithFuture(response.thenApply(HttpResponse::entity)) :
     }
 
     private CompletionStage<HttpResponse> fetch(String url) {
