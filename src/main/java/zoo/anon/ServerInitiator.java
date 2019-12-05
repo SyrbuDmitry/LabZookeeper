@@ -70,11 +70,11 @@ public class ServerInitiator {
     private CompletionStage<HttpResponse> sendRequestToRandomServer(Request r){
         return Patterns.ask(storage,new GetServer(), Duration.ofSeconds(5))
                     .thenApply(o->(String)o)
-                    .thenCompose(re->fetch(re));
+                    .thenCompose(re->fetch(serverRequestBuilder(re,r)));
     }
 
     //запрос серверу
-    private HttpRequest serverRequestBuilder(String servUrl,Request r){
-        return HttpRequest.create("http://"+servUrl+"/?");
+    private String serverRequestBuilder(String servUrl,Request r){
+        return "http://"+servUrl+"/?url="+r.url+"&count="+r.count;
     }
 }
