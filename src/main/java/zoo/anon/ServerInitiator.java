@@ -75,6 +75,6 @@ public class ServerInitiator {
 
     //запрос серверу
     private HttpRequest serverRequestBuilder(String servUrl,Request r){
-        return HttpRequest.create(servUrl+"1");
+        return HttpRequest.create("http://"+servUrl+"");
     }
 }
