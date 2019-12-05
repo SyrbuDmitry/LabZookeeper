@@ -48,17 +48,19 @@ public class ServerInitiator {
     }
 
     private Route handleRequest(Request r){
-        CompletionStage<HttpResponse> response = fetch(r.url);
-        return r.count==0? completeWithFuture(response) : sendRequestToRandomServer(new Request(r.url,r.count-1));
+        return r.count==0? completeWithFuture(fetch(r.url)) :
+                completeWithFuture(sendRequestToRandomServer(new Request(r.url,r.count-1)));
     }
+
 
     //отправка url
     private CompletionStage<HttpResponse> fetch(String url) {
         return http.singleRequest(HttpRequest.create(url));
     }
 
-    private Route sendRequestToRandomServer(Request r){
-
+    //отправка рандому
+    private CompletionStage<HttpResponse> sendRequestToRandomServer(Request r){
+        
     }
 
 }
