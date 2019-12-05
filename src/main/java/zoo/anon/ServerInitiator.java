@@ -70,7 +70,7 @@ public class ServerInitiator implements Watcher{
     //отправка url
     private CompletionStage<HttpResponse> fetch(String url) {
         System.out.println("FETCH "+url);
-        return http.singleRequest(HttpRequest.create("http://localhost:8085"));
+        return http.singleRequest(HttpRequest.create(url));
     }
 
     //отправка рандому
