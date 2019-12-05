@@ -37,7 +37,7 @@ public class AnonApp {
                 ConnectHttp.toHost(args[0], Integer.parseInt(args[1])),
                 materializer
         );
-        System.out.println("Server online at http://localhost:8085/\nPress RETURN to stop...");
+        System.out.println("Server online at" +args[0]+":"+args[1]);
         System.in.read();
         binding
                 .thenCompose(ServerBinding::unbind)
