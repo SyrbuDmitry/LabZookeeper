@@ -32,8 +32,7 @@ public class ServerInitiator {
                         pathSingleSlash(() ->
                                 parameter("url", (url) ->
                                         parameter("count", (count) ->{
-                                                    Future<Object> result = Patterns.ask(storage, new Request(url,Integer.parseInt(count)), 5000);
-                                                    return completeOKWithFuture(result, Jackson.marshaller());
+                                                    handleRequest();
                                         }
                                         )
                                 )
@@ -41,6 +40,7 @@ public class ServerInitiator {
                 );
     }
 
-
-
+    private Route handleRequest(){
+        return complete("s");
+    }
 }
