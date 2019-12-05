@@ -17,12 +17,12 @@ import java.util.concurrent.ExecutionException;
 
 import static akka.http.javadsl.server.Directives.*;
 
-public class ServerInitiator {
+public class ServerInitiator implements Watcher{
 
     private ZooKeeper zoo;
     private Http http;
     private ActorRef storage;
-    
+
     ServerInitiator(ZooKeeper zoo,ActorRef storage, Http http) throws KeeperException, InterruptedException{
         this.zoo = zoo;
         this.storage = storage;
@@ -30,7 +30,7 @@ public class ServerInitiator {
     }
 
     private void WatchServer(WatchedEvent e) throws KeeperException, InterruptedException{
-        zoo.getChildren("/servers",);
+        zoo.getChildren("/servers",this);
     }
 
     public void createServer(String host, String port) throws KeeperException,InterruptedException{
@@ -78,5 +78,10 @@ public class ServerInitiator {
     //запрос серверу
     private String serverRequestBuilder(String servUrl,Request r){
         return "http://"+servUrl+"/?url="+r.url+"&count="+r.count;
+    }
+
+    @Override
+    public void process(WatchedEvent event){
+        
     }
 }
