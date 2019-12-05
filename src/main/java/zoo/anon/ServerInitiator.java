@@ -60,8 +60,8 @@ public class ServerInitiator {
 
     //отправка рандому
     private CompletionStage<HttpResponse> sendRequestToRandomServer(Request r){
-        Patterns.ask(storage,new GetServer(),5000)
-        return fetch();
+        return  Patterns.ask(storage,new GetServer(),5000).
+
     }
 
 }
