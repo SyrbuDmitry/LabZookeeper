@@ -22,15 +22,15 @@ public class ServerInitiator {
     private ZooKeeper zoo;
     private Http http;
     private ActorRef storage;
-    ServerInitiator(ZooKeeper zoo,ActorRef storage, Http http){
+    ServerInitiator(ZooKeeper zoo,ActorRef storage, Http http) throws KeeperException, InterruptedException{
         this.zoo = zoo;
         this.storage = storage;
         this.http = http;
         WatchServer();
     }
 
-    private void WatchServer(WatchedEvent e){
-        zoo.getChildren("/servers",this::WatchServer)
+    private void WatchServer(WatchedEvent e) throws KeeperException, InterruptedException{
+        zoo.getChildren("/servers",this::WatchServer);
     }
 
     public void createServer(String host, String port) throws KeeperException,InterruptedException{
