@@ -15,10 +15,12 @@ import org.apache.zookeeper.ZooKeeper;
 import scala.concurrent.Future;
 
 import java.util.concurrent.CompletionStage;
+import java.util.regex.Pattern;
 
 import static akka.http.javadsl.server.Directives.*;
 
 public class ServerInitiator {
+
     private ZooKeeper zoo;
     ActorRef storage;
     ServerInitiator(ZooKeeper zoo,ActorRef storage){
@@ -37,19 +39,23 @@ public class ServerInitiator {
                 route(
                         pathSingleSlash(() ->
                                 parameter("url", (url) ->
-                                        parameter("count", (count) -> handleRequest(new Request(url,count)))
+                                        parameter("count", (count) -> {
+                                                   Future<Object> res = Patterns.ask(storage,new Request(url,count),5000);
+                                                   return complete("complete");
+                                        }
+                                        )
                                 )
                         )
                 );
     }
 
-    private Route handleRequest(Request r){
-        return r.count==0 ? completeOKWithFuture(fetch(r.url).thenApply()) :
-    }
-
-    CompletionStage<HttpResponse> fetch(String url) {
-        final Http http = Http.get(context().system());
-        return http.singleRequest(HttpRequest.create(url));
-    }
+//    private Route handleRequest(Request r){
+//        return r.count==0 ? completeOKWithFuture(fetch(r.url).thenApply()) :
+//    }
+//
+//    CompletionStage<HttpResponse> fetch(String url) {
+//        final Http http = Http.get(context().system());
+//        return http.singleRequest(HttpRequest.create(url));
+//    }
 
 }
