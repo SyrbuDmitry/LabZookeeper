@@ -7,6 +7,7 @@ import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
 import akka.http.javadsl.server.Route;
 import akka.pattern.Patterns;
+import com.sun.tools.internal.ws.processor.model.Response;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.ZooDefs;
@@ -43,7 +44,7 @@ public class ServerInitiator {
     }
 
     private Route handleRequest(Request r){
-        return r.count==0 ? completeOKWithFuture(fetch(r.url).) :
+        return r.count==0 ? completeOKWithFuture(fetch(r.url).thenApply(Response::)) :
     }
 
     CompletionStage<HttpResponse> fetch(String url) {
