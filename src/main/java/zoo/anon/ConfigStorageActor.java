@@ -20,7 +20,7 @@ public class ConfigStorageActor extends AbstractActor {
     final Http http = Http.get(context().system());
     private ZooWatcher zooWatcher;
     private ZooKeeper zoo;
-    private ArrayList<String> servers;
+    private ArrayList<String> servers = new ArrayList<>();
     private Random random = new Random();
 
 
