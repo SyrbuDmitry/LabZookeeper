@@ -51,7 +51,7 @@ public class ServerInitiator {
     }
 
     private CompletionStage<HttpResponse> fetch(String url) {
-        return http.singleRequest(HttpRequest.create(url)).toCompletableFuture();
+        return http.singleRequest(HttpRequest.create(url));
     }
 
 }
