@@ -52,10 +52,7 @@ public class ServerInitiator implements Watcher{
                 route(
                         pathSingleSlash(() ->
                                 parameter("url", (url) ->
-                                        parameter("count", (count) ->{
-
-                                            return  handleRequest(new Request(url,count));
-                                        })
+                                        parameter("count", (count) ->handleRequest(new Request(url,count)))
                                 )
                         )
                 );
