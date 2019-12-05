@@ -31,7 +31,7 @@ public class ServerInitiator {
         this.http = http;
     }
     public void createServer(String host, String port) throws KeeperException,InterruptedException{
-        String path = zoo.create("/servers/"+host,
+        String path = zoo.create("/servers/"+host+":"+port,
                 port.getBytes(),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE,
                 CreateMode.EPHEMERAL);
