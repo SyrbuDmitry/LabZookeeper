@@ -59,7 +59,8 @@ public class ServerInitiator implements Watcher{
     }
 
     private Route handleRequest(Request r){
-        System.out.println(r.url+" "+r.count);
+        if (r.count==0)
+        System.out.println("FINAL  HOP ON ");
         return r.count==0? completeWithFuture(fetch(r.url)) :
                 completeWithFuture(sendRequestToRandomServer(new Request(r.url,r.count-1)));
     }
