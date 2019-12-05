@@ -49,13 +49,7 @@ public class ServerInitiator {
 
     private Route handleRequest(Request r){
         CompletionStage<HttpResponse> response = fetch(r.url);
-        try {
-            return complete(response.toCompletableFuture().get());
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-        }
+            return completeWithFuture(response);
     }
 
     private CompletionStage<HttpResponse> fetch(String url) {
