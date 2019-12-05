@@ -31,7 +31,6 @@ public class AnonApp {
         final Http http = Http.get(system);
         ServerInitiator init = new ServerInitiator(zoo,configStorage,http);
         init.createServer(host,port);
-        init.createServer(host,"9000");
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = init.createRoute().flow(system, materializer);
 
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(
