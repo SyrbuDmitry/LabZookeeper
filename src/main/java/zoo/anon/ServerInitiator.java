@@ -62,7 +62,7 @@ public class ServerInitiator {
 
     //отправка url
     private CompletionStage<HttpResponse> fetch(String url) {
-        System.out.println(url);
+        System.out.println("FETCH "+url);
         return http.singleRequest(HttpRequest.create(url));
     }
 
