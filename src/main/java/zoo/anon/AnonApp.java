@@ -34,10 +34,10 @@ public class AnonApp {
 
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(
                 routeFlow,
-                ConnectHttp.toHost(args[0], Integer.parseInt(args[1])),
+                ConnectHttp.toHost("localhost", 8080),
                 materializer
         );
-        System.out.println("Server online at" +args[0]+":"+args[1]);
+        System.out.println("Server online at" +"localhost"+":"+"8080");
         System.in.read();
         binding
                 .thenCompose(ServerBinding::unbind)
