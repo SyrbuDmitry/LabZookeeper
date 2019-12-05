@@ -59,7 +59,6 @@ public class ServerInitiator {
                 completeWithFuture(sendRequestToRandomServer(new Request(r.url,r.count-1)));
     }
 
-
     //отправка url
     private CompletionStage<HttpResponse> fetch(String url) {
         System.out.println("FETCH "+url);
