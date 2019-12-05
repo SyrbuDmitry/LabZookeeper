@@ -63,7 +63,7 @@ public class ServerInitiator {
     //отправка url
     private CompletionStage<HttpResponse> fetch(String url) {
         System.out.println("FETCH "+url);
-        return http.singleRequest(HttpRequest.create(url));
+        return http.singleRequest(HttpRequest.create("localhost:8085"));
     }
 
     //отправка рандому
@@ -75,6 +75,6 @@ public class ServerInitiator {
 
     //запрос серверу
     private HttpRequest serverRequestBuilder(String servUrl,Request r){
-        
+        return HttpRequest.create(servUrl+"1");
     }
 }
