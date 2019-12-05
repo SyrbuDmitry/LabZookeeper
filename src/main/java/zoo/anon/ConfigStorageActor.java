@@ -27,6 +27,12 @@ public class ConfigStorageActor extends AbstractActor {
     public Receive createReceive(){
         return ReceiveBuilder.create()
                 .match(Request.class,r->{})
+                .match(GetServer.class,r->{
+                    sender().tell(,ActorRef.noSender());
+                })
                 .build();
+    }
+    private String getRandomServer(){
+        
     }
 }

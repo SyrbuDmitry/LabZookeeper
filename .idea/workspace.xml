@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f226d497-b314-4dcc-887c-0ce05648882c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" afterPath="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zoo/anon/ServerInitiator.java" afterPath="$PROJECT_DIR$/src/main/java/zoo/anon/ServerInitiator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerInitiator.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ServerInitiator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/ServerInitiator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="607">
-              <caret line="62" column="8" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+            <state relative-caret-position="562">
+              <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1932#1933#0" expanded="true" />
@@ -53,11 +54,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConfigStorageActor.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GetServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/GetServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigStorageActor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+            <state relative-caret-position="525">
+              <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,10 +127,10 @@
         <option value="$PROJECT_DIR$/src/main/java/zoo/anon/RouterActor.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/zoo/anon/ZooWatcher.java" />
-        <option value="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" />
         <option value="$PROJECT_DIR$/src/main/java/zoo/anon/AnonApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/zoo/anon/Request.java" />
         <option value="$PROJECT_DIR$/src/main/java/zoo/anon/ServerInitiator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" />
       </list>
     </option>
   </component>
@@ -341,12 +352,12 @@
       <updated>1575292537975</updated>
       <workItem from="1575292539207" duration="710000" />
       <workItem from="1575389835597" duration="10429000" />
-      <workItem from="1575539476236" duration="3763000" />
+      <workItem from="1575539476236" duration="3936000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14902000" />
+    <option name="totallyTimeSpent" value="15075000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-47" y="23" width="1440" height="877" extended-state="0" />
@@ -500,22 +511,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/ZooWatcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/GetServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/ServerInitiator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1932#1933#0" expanded="true" />
+            <element signature="e#1998#1999#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -533,14 +554,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/ServerInitiator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="607">
-          <caret line="62" column="8" lean-forward="false" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
+        <state relative-caret-position="525">
+          <caret line="35" column="8" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1932#1933#0" expanded="true" />
-            <element signature="e#1998#1999#0" expanded="true" />
           </folding>
         </state>
       </provider>
