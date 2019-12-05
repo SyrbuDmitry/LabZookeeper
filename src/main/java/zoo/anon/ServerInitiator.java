@@ -15,6 +15,7 @@ import org.apache.zookeeper.ZooKeeper;
 import scala.concurrent.Future;
 
 import java.util.concurrent.CompletionStage;
+import java.util.concurrent.ExecutionException;
 
 import static akka.http.javadsl.server.Directives.*;
 
@@ -47,8 +48,14 @@ public class ServerInitiator {
     }
 
     private Route handleRequest(Request r){
-        CompletionStage<HttpResponse> response = fetch(r.url).toCompletableFuture();
-        return complete(response)
+        CompletionStage<HttpResponse> response = fetch(r.url);
+        try {
+            return complete(response.toCompletableFuture().get());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 
     private CompletionStage<HttpResponse> fetch(String url) {
