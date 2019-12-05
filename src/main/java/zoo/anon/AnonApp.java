@@ -38,7 +38,7 @@ public class AnonApp {
                 ConnectHttp.toHost(host, Integer.parseInt(port)),
                 materializer
         );
-        System.out.println("Server online at" +host+":"+port);
+        System.out.println("Server online at " +host+":"+port);
         System.in.read();
         binding
                 .thenCompose(ServerBinding::unbind)
