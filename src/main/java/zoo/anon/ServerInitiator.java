@@ -12,6 +12,7 @@ import org.apache.zookeeper.*;
 import scala.concurrent.Future;
 
 import java.time.Duration;
+import java.util.List;
 import java.util.concurrent.CompletionStage;
 import java.util.concurrent.ExecutionException;
 
@@ -27,10 +28,14 @@ public class ServerInitiator implements Watcher{
         this.zoo = zoo;
         this.storage = storage;
         this.http = http;
+        GetServers();
     }
 
-    private void WatchServer(WatchedEvent e) throws KeeperException, InterruptedException{
-        zoo.getChildren("/servers",this);
+    private void GetServers() throws KeeperException, InterruptedException{
+        System.out.println("GETTING SERVERS FROM KEEPER");
+        List<String> serverlist = zoo.getChildren("/servers",this);
+        System.out.println(serverlist);
+        storage.tell(new ServerList(serverlist),ActorRef.noSender());
     }
 
     public void createServer(String host, String port) throws KeeperException,InterruptedException{
@@ -82,6 +87,10 @@ public class ServerInitiator implements Watcher{
 
     @Override
     public void process(WatchedEvent event){
-        
+        try {
+            GetServers();
+        } catch (KeeperException | InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

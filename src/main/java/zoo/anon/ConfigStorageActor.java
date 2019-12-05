@@ -20,14 +20,14 @@ public class ConfigStorageActor extends AbstractActor {
     final Http http = Http.get(context().system());
     private ZooWatcher zooWatcher;
     private ZooKeeper zoo;
-    private ArrayList<String> servers = new ArrayList<>();
+    private List<String> servers = new ArrayList<>();
     private Random random = new Random();
 
 
     @Override
     public Receive createReceive(){
         return ReceiveBuilder.create()
-                .match(Request.class,r->{})
+                .match(ServerList.class,r->this.servers=r.getServerlist())
                 .match(AddServer.class,r->{
                     servers.add(r.getServUrl());
                     System.out.println(servers);
