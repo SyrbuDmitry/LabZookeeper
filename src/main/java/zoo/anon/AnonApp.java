@@ -22,6 +22,7 @@ import java.util.concurrent.CompletionStage;
 
 public class AnonApp {
     public static void main(String[] args) throws InterruptedException, IOException, KeeperException {
+        final String host = args[0], port = args[1];
         ActorSystem system = ActorSystem.create("lab6");
         final ActorMaterializer materializer = ActorMaterializer.create(system);
         ActorRef configStorage = system.actorOf(Props.create(ConfigStorageActor.class));
@@ -29,15 +30,15 @@ public class AnonApp {
         ZooKeeper zoo = new ZooKeeper("127.0.0.1:2181", 3000, zooWatcher);
         final Http http = Http.get(system);
         ServerInitiator init = new ServerInitiator(zoo,configStorage,http);
-        init.createServer("localhost","8080");
+        init.createServer(host,port);
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = init.createRoute().flow(system, materializer);
 
         final CompletionStage<ServerBinding> binding = http.bindAndHandle(
                 routeFlow,
-                ConnectHttp.toHost("localhost", 8085),
+                ConnectHttp.toHost(host, Integer.parseInt(port)),
                 materializer
         );
-        System.out.println("Server online at" +"localhost"+":"+"8085");
+        System.out.println("Server online at" +host+":"+port);
         System.in.read();
         binding
                 .thenCompose(ServerBinding::unbind)
