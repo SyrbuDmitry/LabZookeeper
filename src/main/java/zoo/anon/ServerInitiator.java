@@ -1,6 +1,7 @@
 package zoo.anon;
 
 import akka.actor.ActorRef;
+import akka.http.javadsl.Http;
 import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
@@ -42,10 +43,11 @@ public class ServerInitiator {
     }
 
     private Route handleRequest(Request r){
-        return r.count==0 ?
+        return r.count==0 ? Completefetch(r.url) :
     }
 
     CompletionStage<HttpResponse> fetch(String url) {
+        final Http http = Http.get(context().system());
         return http.singleRequest(HttpRequest.create(url));
     }
 
