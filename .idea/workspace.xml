@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f226d497-b314-4dcc-887c-0ce05648882c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" afterPath="$PROJECT_DIR$/src/main/java/zoo/anon/ConfigStorageActor.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/zoo/anon/ServerInitiator.java" afterPath="$PROJECT_DIR$/src/main/java/zoo/anon/ServerInitiator.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,8 +42,8 @@
       <file leaf-file-name="ServerInitiator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/ServerInitiator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="62" column="73" lean-forward="false" selection-start-line="62" selection-start-column="73" selection-end-line="62" selection-end-column="73" />
+            <state relative-caret-position="607">
+              <caret line="63" column="32" lean-forward="false" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1932#1933#0" expanded="true" />
@@ -352,12 +351,12 @@
       <updated>1575292537975</updated>
       <workItem from="1575292539207" duration="710000" />
       <workItem from="1575389835597" duration="10429000" />
-      <workItem from="1575539476236" duration="4105000" />
+      <workItem from="1575539476236" duration="4139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15244000" />
+    <option name="totallyTimeSpent" value="15278000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-47" y="23" width="1440" height="877" extended-state="0" />
@@ -554,8 +553,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/zoo/anon/ServerInitiator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="62" column="73" lean-forward="false" selection-start-line="62" selection-start-column="73" selection-end-line="62" selection-end-column="73" />
+        <state relative-caret-position="607">
+          <caret line="63" column="32" lean-forward="false" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1932#1933#0" expanded="true" />
