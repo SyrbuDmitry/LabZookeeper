@@ -8,10 +8,7 @@ import akka.http.javadsl.model.HttpResponse;
 import akka.http.javadsl.server.Route;
 import akka.pattern.Patterns;
 import com.sun.tools.internal.ws.processor.model.Response;
-import org.apache.zookeeper.CreateMode;
-import org.apache.zookeeper.KeeperException;
-import org.apache.zookeeper.ZooDefs;
-import org.apache.zookeeper.ZooKeeper;
+import org.apache.zookeeper.*;
 import scala.concurrent.Future;
 
 import java.time.Duration;
@@ -29,7 +26,13 @@ public class ServerInitiator {
         this.zoo = zoo;
         this.storage = storage;
         this.http = http;
+        WatchServer();
     }
+
+    private void WatchServer(WatchedEvent e){
+        zoo.getChildren("/servers",this::WatchServer)
+    }
+
     public void createServer(String host, String port) throws KeeperException,InterruptedException{
         String path = zoo.create("/servers/"+host+":"+port,
                 port.getBytes(),
