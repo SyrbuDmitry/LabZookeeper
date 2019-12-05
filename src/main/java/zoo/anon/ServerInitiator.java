@@ -49,7 +49,7 @@ public class ServerInitiator {
     }
 
     CompletionStage<HttpResponse> fetch(String url) {
-        final Http http = Http.get(context().system());
+        final Http http = new Http();
         return http.singleRequest(HttpRequest.create(url));
     }
 
