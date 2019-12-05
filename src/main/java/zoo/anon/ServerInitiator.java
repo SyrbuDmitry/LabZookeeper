@@ -67,9 +67,16 @@ public class ServerInitiator {
 
     //отправка рандому
     private CompletionStage<HttpResponse> sendRequestToRandomServer(Request r){
-            String servUrl = Patterns.ask(storage,new GetServer(), Duration.ofSeconds(5)).toCompletableFuture().toString();
+        String servUrl = null;
+        try {
+            servUrl = Patterns.ask(storage,new GetServer(), Duration.ofSeconds(5)).toCompletableFuture().get();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
 
-            return fetch(servUrl);
+        return fetch(servUrl);
     }
 
 }
