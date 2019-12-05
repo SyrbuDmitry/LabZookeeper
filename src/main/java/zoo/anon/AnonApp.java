@@ -27,8 +27,6 @@ public class AnonApp {
         ActorRef configStorage = system.actorOf(Props.create(ConfigStorageActor.class));
         ZooWatcher zooWatcher = new ZooWatcher();
         ZooKeeper zoo = new ZooKeeper("127.0.0.1:2181", 3000, zooWatcher);
-
-
         final Http http = Http.get(system);
         ServerInitiator init = new ServerInitiator(zoo,configStorage,http);
         init.createServer(args[0],args[1]);

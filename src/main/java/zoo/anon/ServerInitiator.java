@@ -35,6 +35,7 @@ public class ServerInitiator {
                 port.getBytes(),
                 ZooDefs.Ids.OPEN_ACL_UNSAFE,
                 CreateMode.EPHEMERAL);
+        storage.tell(new AddServer(host+port),ActorRef.noSender());
         System.out.println(path+" Connected");
     }
     public Route createRoute() {
@@ -62,7 +63,7 @@ public class ServerInitiator {
     //отправка рандому
     private CompletionStage<HttpResponse> sendRequestToRandomServer(Request r){
             String servUrl = Patterns.ask(storage,new GetServer(), Duration.ofSeconds(5)).toCompletableFuture().toString();
-            return fetch(servUrl);
+            return fetch("http//"+servUrl);
     }
 
 }
