@@ -14,6 +14,7 @@ import org.apache.zookeeper.ZooDefs;
 import org.apache.zookeeper.ZooKeeper;
 import scala.concurrent.Future;
 
+import java.time.Duration;
 import java.util.concurrent.CompletionStage;
 import java.util.concurrent.ExecutionException;
 
@@ -60,8 +61,8 @@ public class ServerInitiator {
 
     //отправка рандому
     private CompletionStage<HttpResponse> sendRequestToRandomServer(Request r){
-        return  Patterns.ask(storage,new GetServer(),5000).
-
+            String servUrl = Patterns.ask(storage,new GetServer(), Duration.ofSeconds(5)).toCompletableFuture().toString();
+            
     }
 
 }
