@@ -31,16 +31,13 @@ public class ServerInitiator {
                 route(
                         pathSingleSlash(() ->
                                 parameter("url", (url) ->
-                                        parameter("count", (count) ->{
-                                                    handleRequest();
-                                        }
-                                        )
+                                        parameter("count", (count) -> handleRequest(new Request(url,count)))
                                 )
                         )
                 );
     }
 
-    private Route handleRequest(){
-        return complete("s");
+    private Route handleRequest(Request r){
+        
     }
 }
